@@ -5,35 +5,189 @@
   --ff-heading: 'Inter', sans-serif;
   --ff-body: 'Inter', sans-serif;
 }
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:var(--ff-body);color:var(--clr-dark);line-height:1.6;}
-.navbar{position:fixed;top:0;width:100%;display:flex;align-items:center;justify-content:space-between;background:#fff;padding:1rem;box-shadow:0 2px 6px rgba(0,0,0,.1);z-index:100;}
-.logo{font-family:var(--ff-heading);font-weight:800;color:var(--clr-dark);text-decoration:none;font-size:1.25rem;}
-.nav-links{list-style:none;display:flex;gap:1rem;}
-.nav-links a{color:var(--clr-dark);text-decoration:none;font-weight:600;}
-.nav-toggle{display:none;}
-.btn{font-family:var(--ff-heading);padding:.75em 1.25em;border:none;border-radius:4px;cursor:pointer;}
-.btn-primary{background:var(--clr-accent);color:#fff;}
-.hero{background:url('https://picsum.photos/id/1015/1600/700')center/cover no-repeat;padding:12rem 1rem;text-align:center;color:#fff;}
-.hero-content h1{font-family:var(--ff-heading);font-size:3rem;max-width:800px;margin:0 auto;}
-.section{padding:6rem 1rem;text-align:center;}
-.services, .portfolio, .plans, .about, .process, .testimonials, .contact{padding-top:8rem;}
-.services-grid, .plans-grid, .about-grid, .process-grid{display:grid;gap:2rem;}
-.services-grid{grid-template-columns:repeat(auto-fit,minmax(240px,1fr));}
-.plans-grid{grid-template-columns:repeat(auto-fit,minmax(200px,1fr));}
-.about-grid{grid-template-columns:1fr 1fr;align-items:center;}
-.process-grid{grid-template-columns:repeat(auto-fit,minmax(150px,1fr));}
-.carousel{display:flex;overflow-x:auto;gap:1rem;padding:1rem;}
-.slide{position:relative;flex:0 0 80%;max-width:400px;}
-.slide img{width:100%;border-radius:8px;}
-.overlay{position:absolute;bottom:0;left:0;width:100%;background:rgba(0,0,0,.6);color:#fff;padding:1rem;text-align:left;border-radius:0 0 8px 8px;}
-.testimonials-slider{display:flex;overflow-x:auto;gap:1rem;}
-.testimonial{flex:0 0 80%;max-width:300px;border:1px solid #eee;padding:1rem;border-radius:8px;text-align:left;}
-.cookie-banner{position:fixed;bottom:0;width:100%;background:#333;color:#fff;padding:1rem;text-align:center;display:none;}
-.cookie-banner button{margin-left:1rem;padding:.5em 1em;border:none;border-radius:4px;background:var(--clr-accent);color:#fff;}
-.footer{background:#f9f9f9;padding:2rem;text-align:center;}
-@media(max-width:768px){
-  .about-grid{grid-template-columns:1fr;}
-  .nav-links{display:none;}
-  .nav-toggle{display:block;}
+
+/* Reset & base */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: var(--ff-body); color: var(--clr-dark); line-height: 1.6; }
+a { text-decoration: none; color: inherit; }
+
+/* Navbar */
+.navbar {
+  position: fixed; top: 0; width: 100%;
+  display: flex; align-items: center; justify-content: space-between;
+  background: #fff; padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); z-index: 100;
+}
+.logo {
+  font-family: var(--ff-heading); font-weight: 800;
+  font-size: 1.25rem; color: var(--clr-dark);
+}
+.nav-links {
+  display: none;
+  flex-direction: column;
+  position: absolute; top: 64px; right: 1rem;
+  background: #fff; padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.nav-links.active {
+  display: flex;
+}
+.nav-links li {
+  list-style: none;
+  margin: 0.5rem 0;
+}
+.nav-links a {
+  font-weight: 600;
+}
+.nav-toggle {
+  background: none; border: none;
+  font-size: 1.5rem; cursor: pointer;
+}
+
+/* Buttons */
+.btn {
+  font-family: var(--ff-heading);
+  padding: .75em 1.25em;
+  border: none; border-radius: 4px;
+  cursor: pointer;
+}
+.btn-primary {
+  background: var(--clr-accent);
+  color: #fff;
+}
+
+/* Section base */
+.section {
+  padding: 6rem 1rem;
+  text-align: center;
+}
+
+/* Hero */
+.hero {
+  background: url('https://picsum.photos/id/1015/1600/700') center/cover no-repeat;
+  padding: 10rem 1rem;
+  text-align: center; color: #fff;
+}
+.hero-content h1 {
+  font-family: var(--ff-heading);
+  font-size: 3rem; max-width: 800px;
+  margin: 0 auto 1rem;
+}
+
+/* Services */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  gap: 2rem;
+}
+
+/* Portfolio */
+.carousel {
+  display: flex; overflow-x: auto; gap: 1rem; padding: 1rem 0;
+}
+.slide {
+  position: relative;
+  flex: 0 0 80%; max-width: 400px;
+}
+.slide img {
+  width: 100%; border-radius: 8px;
+}
+.overlay {
+  position: absolute; bottom: 0; left: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  color: #fff; padding: 1rem;
+  border-radius: 0 0 8px 8px;
+  opacity: 0; transition: opacity 0.3s ease;
+}
+.slide:hover .overlay {
+  opacity: 1;
+}
+
+/* Hosting Plans */
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  gap: 2rem;
+}
+.plan.featured {
+  border: 2px solid var(--clr-accent);
+}
+
+/* About */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center; gap: 2rem;
+}
+
+/* Process */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+  gap: 2rem;
+}
+.process-grid span {
+  display: inline-block;
+  background: var(--clr-accent);
+  color: #fff;
+  width: 32px; height: 32px;
+  text-align: center; line-height: 32px;
+  border-radius: 50%;
+  font-weight: bold; margin-bottom: .5rem;
+}
+
+/* Testimonials */
+.testimonials-slider {
+  display: flex; overflow-x: auto; gap: 1rem; padding: 1rem 0;
+}
+.testimonial {
+  flex: 0 0 80%; max-width: 300px;
+  border: 1px solid #eee; padding: 1rem;
+  border-radius: 8px; text-align: left;
+}
+
+/* Contact Form */
+.contact form label {
+  display: block; margin-bottom: 1rem;
+}
+.contact form input,
+.contact form textarea {
+  width: 100%; padding: .5em; margin-top: .25em;
+  border: 1px solid #ccc; border-radius: 4px;
+}
+
+/* Footer */
+.footer div {
+  margin-bottom: .5em;
+}
+.footer a {
+  margin: 0 .5em;
+  color: var(--clr-dark);
+}
+
+/* Cookie Banner */
+.cookie-banner {
+  position: fixed; bottom: 0; width: 100%;
+  background: #333; color: #fff;
+  padding: 1rem; text-align: center;
+  display: none;
+}
+.fade-out {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+/* Responsive */
+@media (min-width: 769px) {
+  .nav-links {
+    display: flex !important;
+    position: static;
+    box-shadow: none;
+  }
+  .nav-toggle { display: none; }
+}
+@media (max-width: 768px) {
+  .about-grid { grid-template-columns: 1fr; }
 }

@@ -3,11 +3,18 @@ document.querySelector('.nav-toggle').addEventListener('click', () => {
   document.querySelector('.nav-links').classList.toggle('active');
 });
 
-// Cookie banner
+// Cookie banner with fade-out
+const banner = document.getElementById('cookie-banner');
+const acceptBtn = document.getElementById('accept-cookies');
+
 if (!localStorage.getItem('cookiesAccepted')) {
-  document.getElementById('cookie-banner').style.display = 'block';
+  banner.style.display = 'block';
 }
-document.getElementById('accept-cookies').addEventListener('click', () => {
-  localStorage.setItem('cookiesAccepted','yes');
-  document.getElementById('cookie-banner').style.display = 'none';
+
+acceptBtn.addEventListener('click', () => {
+  localStorage.setItem('cookiesAccepted', 'yes');
+  banner.classList.add('fade-out');
+  setTimeout(() => {
+    banner.style.display = 'none';
+  }, 300);
 });
