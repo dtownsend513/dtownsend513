@@ -1,0 +1,5 @@
+[build]
+  # no build step
+  command = ""
+  # publish everything in this folder
+  publish = "."
