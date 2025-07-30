@@ -1,20 +1,16 @@
-// Mobile nav toggle
+// NAV TOGGLE
 document.querySelector('.nav-toggle').addEventListener('click', () => {
-  document.querySelector('.nav-links').classList.toggle('active');
+  document.querySelector('.nav-list').classList.toggle('active');
 });
 
-// Cookie banner with fade-out
+// COOKIE BANNER
 const banner = document.getElementById('cookie-banner');
-const acceptBtn = document.getElementById('accept-cookies');
-
+const accept = document.getElementById('accept-cookies');
 if (!localStorage.getItem('cookiesAccepted')) {
   banner.style.display = 'block';
 }
-
-acceptBtn.addEventListener('click', () => {
-  localStorage.setItem('cookiesAccepted', 'yes');
+accept.addEventListener('click', () => {
+  localStorage.setItem('cookiesAccepted','yes');
   banner.classList.add('fade-out');
-  setTimeout(() => {
-    banner.style.display = 'none';
-  }, 300);
+  setTimeout(() => banner.style.display='none', 300);
 });
