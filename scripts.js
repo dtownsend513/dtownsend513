@@ -5,12 +5,12 @@ document.querySelector('.nav-toggle').addEventListener('click', () => {
 
 // COOKIE BANNER
 const banner = document.getElementById('cookie-banner');
-const accept = document.getElementById('accept-cookies');
+const btn = document.getElementById('accept-cookies');
 if (!localStorage.getItem('cookiesAccepted')) {
   banner.style.display = 'block';
 }
-accept.addEventListener('click', () => {
-  localStorage.setItem('cookiesAccepted','yes');
+btn.addEventListener('click', () => {
+  localStorage.setItem('cookiesAccepted', 'yes');
   banner.classList.add('fade-out');
-  setTimeout(() => banner.style.display='none', 300);
+  setTimeout(() => banner.style.display = 'none', 300);
 });
