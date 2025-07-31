@@ -1,2 +1,3 @@
 [build]
+  # no build command for a pure static site
   publish = "."
