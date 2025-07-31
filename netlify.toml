@@ -1,2 +1,3 @@
 [build]
-  publish = "dist"
+  # No build command needed for a static site
+  publish = "."
