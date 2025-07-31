@@ -1,129 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Townsend SQ | Web Design</title>
-
-  <!-- Updated to match your current file -->
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>TownsendSQ | Home</title>
+  <meta name="description" content="Transform your online presence with expert web design & transparent hosting.">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <!-- Navigation -->
-  <header class="site-header">
-    <nav class="nav container">
+  <!-- NAV -->
+  <header>
+    <div class="container navbar">
       <a href="#" class="logo">TownsendSQ</a>
-      <button class="nav-toggle" aria-label="Open menu">&#9776;</button>
-      <ul class="nav-menu">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact" class="btn">Contact Us</a></li>
-      </ul>
-    </nav>
+      <nav>
+        <button class="nav-toggle" aria-label="Menu">☰</button>
+        <ul class="nav-menu">
+          <li><a href="index.html#hero">Home</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="hosting.html">Hosting</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="btn btn-primary">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-text">
-        <h1>Expert Web Design<br>That Works</h1>
-        <p>No hidden fees. Just beautiful, high-performance sites that grow your business.</p>
-        <a href="#services" class="btn btn-primary">Explore Services</a>
+  <section id="hero">
+    <div class="container">
+      <h1>Transform Your Online Presence</h1>
+      <p>Clean, high-impact portfolio sites & worry-free hosting—no hidden fees.</p>
+      <a href="services.html" class="btn btn-primary">Explore Services</a>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="container grid-3">
+      <div class="service-card">
+        <img src="assets/icons/pencil.svg" alt="" loading="lazy">
+        <h3>Custom Web Design</h3>
+        <p>Mobile-first, brand-driven sites built to convert visitors into customers.</p>
       </div>
-      <div class="hero-media">
-        <!-- free Unsplash image -->
-        <img
-          src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
-          alt="Responsive web design on desktop and mobile">
+      <div class="service-card">
+        <img src="assets/icons/cart.svg" alt="" loading="lazy">
+        <h3>Responsive e-Commerce</h3>
+        <p>Seamless online stores optimized for sales & easy management.</p>
+      </div>
+      <div class="service-card">
+        <img src="assets/icons/server.svg" alt="" loading="lazy">
+        <h3>Managed Hosting & Maintenance</h3>
+        <p>Reliable, secure hosting with zero hidden fees and 24/7 support.</p>
       </div>
     </div>
   </section>
 
-  <!-- Services -->
-  <section id="services" class="services container">
-    <h2>Services</h2>
-    <div class="service-grid">
-      <div class="service-card">
-        <h3>Custom Development</h3>
-        <p>Modern, scalable web apps using React, Vue, or Angular.</p>
-      </div>
-      <div class="service-card">
-        <h3>Responsive Design</h3>
-        <p>Mobile-first layouts that look great on any device.</p>
-      </div>
-      <div class="service-card">
-        <h3>SEO & Performance</h3>
-        <p>Optimized code and best practices for speed & rankings.</p>
+  <!-- ABOUT PREVIEW -->
+  <section>
+    <h2>About Damien Townsend</h2>
+    <div class="container grid-2">
+      <img src="assets/images/headshot.jpg" alt="Damien Townsend" loading="lazy">
+      <div>
+        <p>With 10+ years building sites & 200+ happy clients, we deliver polished, conversion-focused web solutions for small businesses.</p>
+        <a href="about.html" class="btn btn-secondary">Learn More</a>
       </div>
     </div>
   </section>
 
-  <!-- UPDATED PORTFOLIO -->
-  <section id="portfolio" class="portfolio container">
-    <h2 class="section-title">Featured Templates</h2>
-    <div class="portfolio-grid">
-      <figure>
-        <img
-          src="https://via.placeholder.com/400x250.png?text=Restaurant+Template"
-          alt="Restaurant website template">
-        <figcaption>Restaurant Template</figcaption>
-      </figure>
-      <figure>
-        <img
-          src="https://via.placeholder.com/400x250.png?text=Law+Firm+Template"
-          alt="Law firm website template">
-        <figcaption>Law Firm Template</figcaption>
-      </figure>
-      <figure>
-        <img
-          src="https://via.placeholder.com/400x250.png?text=Retail+Shop+Template"
-          alt="Retail shop website template">
-        <figcaption>Retail Shop Template</figcaption>
-      </figure>
-      <figure>
-        <img
-          src="https://via.placeholder.com/400x250.png?text=Consultancy+Template"
-          alt="Consultancy website template">
-        <figcaption>Consultancy Template</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section id="about" class="about container">
-    <h2>About Us</h2>
-    <p>With over a decade of experience, TownsendSQ delivers cutting-edge web solutions tailored to your business needs.</p>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="contact container">
-    <h2>Contact Us</h2>
-    <form action="#" class="contact-form">
-      <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" id="name" required>
-      </div>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" required>
-      </div>
-      <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" rows="4" required></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary">Send Message</button>
-    </form>
-  </section>
-
-  <!-- Footer -->
-  <footer class="site-footer">
+  <!-- FOOTER & COOKIE -->
+  <footer>
     <div class="container">
       <p>&copy; 2025 TownsendSQ. All rights reserved.</p>
     </div>
   </footer>
-
-  <!-- Updated to match your current file -->
-  <script src="scripts.js"></script>
+  <div id="cookie-banner">
+    We use cookies to improve your experience.<button id="accept-cookies">Accept</button>
+  </div>
+  <script src="js/scripts.js"></script>
 </body>
 </html>
