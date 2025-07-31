@@ -92,7 +92,7 @@ h2 {
 .portfolio-grid {
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr;      /* mobile: 1 column */
   margin-top: 1rem;
 }
 .portfolio-grid figure {
@@ -103,7 +103,8 @@ h2 {
   text-align: center;
 }
 .portfolio-grid img {
-  width: 100%; display: block;
+  width: 100%;
+  display: block;
   transition: transform 0.3s ease;
 }
 .portfolio-grid img:hover {
