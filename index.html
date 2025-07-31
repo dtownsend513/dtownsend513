@@ -3,225 +3,107 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Damien Townsend | Web Design & Hosting</title>
-  <meta name="description" content="Expert web design & transparent hosting—no hidden fees. Transform your online presence today.">
+  <title>Townsend SQ | Web Design</title>
 
-  <!-- Preconnect & Preload for performance -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <!-- Favicon -->
-  <link rel="icon" href="https://via.placeholder.com/32.png?text=T" sizes="32x32" type="image/png">
-  <link rel="apple-touch-icon" href="https://via.placeholder.com/180.png?text=T">
-
-  <!-- Main Stylesheet -->
+  <!-- Updated to match your current file -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Skip Link for Accessibility -->
-  <a href="#main-content" class="skip-link">Skip to content</a>
-
-  <!-- NAVBAR -->
-  <header class="header" role="banner">
-    <div class="container header-inner">
-      <a href="#" class="brand">Townsend &amp; Townsend</a>
-      <nav class="nav" role="navigation" aria-label="Primary">
-        <button class="nav-toggle"
-                aria-expanded="false"
-                aria-controls="primary-menu"
-                aria-label="Toggle menu">
-          ☰
-        </button>
-        <ul id="primary-menu" class="nav-list">
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#hosting">Hosting</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+  <!-- Navigation -->
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="#" class="logo">TownsendSQ</a>
+      <button class="nav-toggle" aria-label="Open menu">&#9776;</button>
+      <ul class="nav-menu">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact" class="btn">Contact Us</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main id="main-content">
-    <!-- HERO -->
-    <section id="hero" class="hero" aria-label="Hero">
-      <div class="container hero-content">
-        <h1>Expert Web Design<br>&amp; Seamless Hosting</h1>
-        <p>No hidden fees. Just beautiful, high-performance sites that grow your business.</p>
-        <a href="#services" class="btn">Explore Services</a>
-      </div>
-      <div class="hero-decor" aria-hidden="true"></div>
-    </section>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>Web Design That Works</h1>
+      <p>Custom websites built for performance, conversions, and growth.</p>
+      <a href="#contact" class="btn btn-primary">Get Started</a>
+    </div>
+  </section>
 
-    <!-- SERVICES -->
-    <section id="services" class="section services" aria-labelledby="services-heading">
-      <div class="container">
-        <h2 id="services-heading">What We Do</h2>
-        <div class="cards-grid">
-          <div class="card glass">
-            <img src="https://unpkg.com/heroicons@2.0.13/24/outline/pencil-square.svg"
-                 loading="lazy"
-                 alt="Icon of a pencil and square representing design">
-            <h3>Web Design</h3>
-            <p>Beautiful, responsive sites that reflect your brand and convert visitors.</p>
-          </div>
-          <div class="card glass">
-            <img src="https://unpkg.com/heroicons@2.0.13/24/outline/shopping-cart.svg"
-                 loading="lazy"
-                 alt="Icon of a shopping cart">
-            <h3>e-Commerce</h3>
-            <p>Seamless shopping experiences built to maximize sales and loyalty.</p>
-          </div>
-          <div class="card glass">
-            <img src="https://unpkg.com/heroicons@2.0.13/24/outline/server-stack.svg"
-                 loading="lazy"
-                 alt="Icon of a server stack">
-            <h3>Hosting &amp; Support</h3>
-            <p>Rock-solid infrastructure with 24/7 support and transparent pricing.</p>
-          </div>
-        </div>
+  <!-- Services -->
+  <section id="services" class="services container">
+    <h2>Services</h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <h3>Custom Development</h3>
+        <p>Modern, scalable web apps using React, Vue, or Angular.</p>
       </div>
-    </section>
-
-    <!-- PORTFOLIO -->
-    <section id="portfolio" class="section portfolio" aria-labelledby="portfolio-heading">
-      <div class="container">
-        <h2 id="portfolio-heading">Recent Projects</h2>
-        <div class="grid-2x2">
-          <!-- Example of using figure for semantic grouping -->
-          <figure class="portfolio-item">
-            <img src="https://via.placeholder.com/400x250.png?text=Restaurant+Template"
-                 alt="Screenshot of a restaurant website template"
-                 loading="lazy">
-            <figcaption>
-              <h4>Restaurant Template</h4>
-              <a href="#">View Case Study</a>
-            </figcaption>
-          </figure>
-          <figure class="portfolio-item">
-            <img src="https://via.placeholder.com/400x250.png?text=Law+Firm+Template"
-                 alt="Screenshot of a law firm website template"
-                 loading="lazy">
-            <figcaption>
-              <h4>Law Firm Template</h4>
-              <a href="#">View Case Study</a>
-            </figcaption>
-          </figure>
-          <figure class="portfolio-item">
-            <img src="https://via.placeholder.com/400x250.png?text=Retail+Shop+Template"
-                 alt="Screenshot of a retail shop website template"
-                 loading="lazy">
-            <figcaption>
-              <h4>Retail Shop Template</h4>
-              <a href="#">View Case Study</a>
-            </figcaption>
-          </figure>
-          <figure class="portfolio-item">
-            <img src="https://via.placeholder.com/400x250.png?text=Consultancy+Template"
-                 alt="Screenshot of a consultancy website template"
-                 loading="lazy">
-            <figcaption>
-              <h4>Consultancy Template</h4>
-              <a href="#">View Case Study</a>
-            </figcaption>
-          </figure>
-        </div>
+      <div class="service-card">
+        <h3>Responsive Design</h3>
+        <p>Mobile-first layouts that look great on any device.</p>
       </div>
-    </section>
-
-    <!-- HOSTING PLANS -->
-    <section id="hosting" class="section plans" aria-labelledby="hosting-heading">
-      <div class="container">
-        <h2 id="hosting-heading">Hosting Plans</h2>
-        <div class="cards-grid">
-          <article class="plan-card" aria-labelledby="plan-basic">
-            <h3 id="plan-basic">Basic</h3>
-            <p class="price">$50/mo</p>
-            <ul>
-              <li>10 GB Storage</li>
-              <li>100 GB Bandwidth</li>
-              <li>SSL Certificate</li>
-              <li>Weekly Backups</li>
-              <li>5 h Support</li>
-            </ul>
-          </article>
-          <article class="plan-card featured" aria-labelledby="plan-premium">
-            <h3 id="plan-premium">Premium</h3>
-            <p class="price">$100/mo</p>
-            <ul>
-              <li>50 GB Storage</li>
-              <li>500 GB Bandwidth</li>
-              <li>SSL Certificate</li>
-              <li>Daily Backups</li>
-              <li>10 h Support</li>
-            </ul>
-          </article>
-          <article class="plan-card" aria-labelledby="plan-enterprise">
-            <h3 id="plan-enterprise">Enterprise</h3>
-            <p class="price">Contact Us</p>
-            <ul>
-              <li>Unlimited Resources</li>
-              <li>Custom SLAs</li>
-              <li>24/7 Support</li>
-              <li>Advanced Monitoring</li>
-              <li>Dedicated Engineer</li>
-            </ul>
-          </article>
-        </div>
+      <div class="service-card">
+        <h3>SEO & Performance</h3>
+        <p>Optimized code and best practices for speed & rankings.</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="section contact" aria-labelledby="contact-heading">
-      <div class="container">
-        <h2 id="contact-heading">Ready to Get Started?</h2>
-        <div class="contact-grid">
-          <form name="contact" method="POST" data-netlify="true" class="contact-form" aria-label="Contact form">
-            <input type="hidden" name="form-name" value="contact">
-            <label for="name">Name<input id="name" type="text" name="name" required></label>
-            <label for="email">Email<input id="email" type="email" name="email" required></label>
-            <label for="message">Message<textarea id="message" name="message" rows="4"></textarea></label>
-            <button type="submit" class="btn">Send Message</button>
-          </form>
-          <div class="calendly-wrapper" aria-label="Schedule a meeting">
-            <div class="calendly-inline-widget"
-                 data-url="https://calendly.com/your-calendly/30min"
-                 style="min-width:100%;height:320px;"></div>
-            <script src="https://assets.calendly.com/assets/external/widget.js" async defer></script>
-          </div>
-        </div>
+  <!-- Portfolio -->
+  <section id="portfolio" class="portfolio container">
+    <h2>Featured Work</h2>
+    <div class="portfolio-grid">
+      <figure>
+        <img src="assets/project1.jpg" alt="Project 1">
+        <figcaption>Project One</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/project2.jpg" alt="Project 2">
+        <figcaption>Project Two</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/project3.jpg" alt="Project 3">
+        <figcaption>Project Three</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about container">
+    <h2>About Us</h2>
+    <p>With over a decade of experience, TownsendSQ delivers cutting-edge web solutions tailored to your business needs.</p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact container">
+    <h2>Contact Us</h2>
+    <form action="#" class="contact-form">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" required>
       </div>
-    </section>
-  </main>
-
-  <!-- COOKIE BANNER -->
-  <div id="cookie-banner" class="cookie-banner" role="region" aria-label="Cookie usage banner">
-    <p>
-      We use cookies to improve your experience.
-      <button id="accept-cookies" class="btn">Accept</button>
-    </p>
-  </div>
-
-  <!-- FOOTER -->
-  <footer class="footer" role="contentinfo">
-    <div class="container footer-inner">
-      <div class="social-links">
-        <a href="#" aria-label="LinkedIn">LinkedIn</a>
-        <span aria-hidden="true">•</span>
-        <a href="#" aria-label="Twitter">Twitter</a>
-        <span aria-hidden="true">•</span>
-        <a href="#" aria-label="Instagram">Instagram</a>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" required>
       </div>
-      <p>&copy; 2025 Damien Townsend. All rights reserved.</p>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 TownsendSQ. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- Scripts (deferred for performance) -->
-  <script src="scripts.js" defer></script>
+  <!-- Updated to match your current file -->
+  <script src="scripts.js"></script>
 </body>
 </html>

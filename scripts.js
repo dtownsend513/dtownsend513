@@ -1,16 +1,16 @@
-// NAV TOGGLE
-document.querySelector('.nav-toggle').addEventListener('click', () => {
-  document.querySelector('.nav-list').classList.toggle('active');
+// Mobile menu toggle
+const navToggle = document.querySelector('.nav-toggle');
+const navMenu = document.querySelector('.nav-menu');
+
+navToggle.addEventListener('click', () => {
+  navMenu.classList.toggle('nav-menu_visible');
 });
 
-// COOKIE BANNER
-const banner = document.getElementById('cookie-banner');
-const btn = document.getElementById('accept-cookies');
-if (!localStorage.getItem('cookiesAccepted')) {
-  banner.style.display = 'block';
-}
-btn.addEventListener('click', () => {
-  localStorage.setItem('cookiesAccepted', 'yes');
-  banner.classList.add('fade-out');
-  setTimeout(() => banner.style.display = 'none', 300);
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href'))
+            .scrollIntoView({ behavior: 'smooth' });
+  });
 });
